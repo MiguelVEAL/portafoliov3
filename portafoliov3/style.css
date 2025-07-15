@@ -1,0 +1,20 @@
+.navbar{
+    background-color: orange;
+}
+#MDB-logo{
+    width: 70px;
+}
+.Texto{
+    font-size: 20px;
+    text-align: justify;
+    margin-inline: 45px;
+}
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.tarjeta:hover{
+    
+}
