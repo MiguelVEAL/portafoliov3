@@ -1,0 +1,72 @@
+body {
+    background-image: url(/images/Bg_portfolio.png);
+    background: #d9d9d9;
+    background: linear-gradient(90deg,rgba(217, 217, 217, 0.4) 0%, rgba(240, 240, 240, 0.4) 50%, rgba(155, 191, 180, 0.4) 100%);
+}
+.main {
+    margin-inline: 25px;
+}
+.navbar{
+    background-color: orange;
+}
+#MDB-logo{
+    width: 70px;
+}
+.Inicio {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    view-timeline-name: --scroll;
+}
+
+h1 span:first-of-type {
+    color: #09f;
+    /* CORRECCIÓN 2: Ajuste de tamaño de fuente a un valor más legible */
+    font-size: 3.5rem; /* Era 0.35rem, probablemente un error tipográfico */
+}
+
+/* Keyframes (sin cambios) */
+@keyframes scale-up {
+    to { scale: 1.5; }
+}
+
+@keyframes fade-away {
+    to { opacity: 0; }
+}
+
+/* Animación para el primer span */
+h1 span:first-child {
+    animation: fade-away both linear;
+    animation-timeline: --scroll;
+    /* La animación ocurre mientras el elemento sale de la pantalla (entre el 20% y 90% de su salida) */
+    animation-range: exit 20% exit 90%;
+}
+
+/* CORRECCIÓN 3: Sintaxis correcta para múltiples animaciones en el segundo span */
+h1 span:last-child {
+    /* Se definen ambas animaciones separadas por coma */
+    animation: scale-up both ease-in-out, fade-away both linear;
+    
+    /* Se asigna la misma línea de tiempo a ambas */
+    animation-timeline: --scroll;
+    
+    /* Se asigna un rango a CADA animación, separado por coma */
+    /* 1. scale-up: Ocurre desde que el elemento empieza a salir (0%) hasta que ha salido la mitad (50%) */
+    /* 2. fade-away: Ocurre desde que ha salido la mitad (50%) hasta que sale casi por completo (90%) */
+    animation-range: exit 0% exit 50%, exit 50% exit 90%;
+}
+.Texto{
+    font-size: 20px;
+    text-align: justify;
+    margin-inline: 45px;
+}
+.tarjeta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.tarjeta:hover{
+    
+}
